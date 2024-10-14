@@ -6,7 +6,7 @@
 // const seriesDelFinde = ['Prison Break', 'Los anillos de poder', 'Ted Lasso'];
 // const pelisDelFinde = ['El Hoyo 2', 'Locomia', 'Spiderman']
 
-//Acceder a elementos del Array
+//                                                                   Acceder a elementos del Array
 
 // let serieIsma = seriesDelFinde[0]
 // let serieHugo = seriesDelFinde[1]
@@ -16,7 +16,7 @@
 
 
 
-//Recorrer el array:
+//                                                                      Recorrer el array:
 
 // for (i=0; i < seriesDelFinde.length; i++){
 
@@ -41,4 +41,20 @@
 // console.log(finde.slice(0,10))
 
 
+
+//                                   Ejemplo aplicado: Crear array con entradas de usuario
+const listaNombres = []
+let contador = 5
+
+do{
+
+    let entrada = prompt('Ingrese un nombre: ')
+    listaNombres.push(entrada.toUpperCase())
+    
+}while(listaNombres.length != contador)
+    
+console.log(listaNombres)
+const listaNueva = listaNombres.concat(['ANA', 'EMA'])
+
+alert(listaNueva.join('\n'))
 
