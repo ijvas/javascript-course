@@ -61,24 +61,24 @@
 
 //                                             Tipos de datos
 
-const tiposDeDatos = ['String', 'Number', 'Boolean', 'Function', 'Object', 'Array']
+// const tiposDeDatos = ['String', 'Number', 'Boolean', 'Function', 'Object', 'Array']
 
-let miFunction = (a, b) => {a+b}
-let forma = '            redonda    '
-let tamano = 1
+// let miFunction = (a, b) => {a+b}
+// let forma = '            redonda    '
+// let tamano = 1
 
-console.log( typeof miFunction)
-console.log( typeof forma)
-console.log( typeof tamano)
+// console.log( typeof miFunction)
+// console.log( typeof forma)
+// console.log( typeof tamano)
 
-console.log(forma)
+// console.log(forma)
 
-// El método trim quita los espacios al principio y al final de una cadena.
-if (typeof forma == 'string'){
-    forma = forma.trim()
-}
+// // El método trim quita los espacios al principio y al final de una cadena.
+// if (typeof forma == 'string'){
+//     forma = forma.trim()
+// }
 
-console.log(forma)
+// console.log(forma)
 
 
 
@@ -106,3 +106,52 @@ console.log(forma)
 //     console.log(obj.id)
 //     console.log(obj.producto)
 // }
+
+
+
+
+
+
+
+
+//                                          Ejemplo aplicado: Objetos, producto y array
+
+class Producto{
+
+    constructor(nombre, precio){
+        this.nombre = nombre.toUpperCase()
+        this.precio = parseFloat(precio)
+        this.vendido = false
+    }
+
+    sumaIva(){
+        this.precio = this.precio * 1.21
+    }
+
+    vender(){
+        this.vendido = true
+    }
+}
+
+
+const productos = []
+
+const objeto1 = new Producto('arroz', 125)
+const objeto2 = new Producto('fideo', 70)
+const objeto3 = new Producto('pan', 50)
+
+productos.push(objeto1)
+productos.push(objeto2)
+productos.push(objeto3)
+
+console.log(productos)
+
+
+for (prod of productos){
+    prod.sumaIva()
+}
+
+console.log(productos)
+
+
+
