@@ -62,3 +62,47 @@
 //                                             Tipos de datos
 
 const tiposDeDatos = ['String', 'Number', 'Boolean', 'Function', 'Object', 'Array']
+
+let miFunction = (a, b) => {a+b}
+let forma = '            redonda    '
+let tamano = 1
+
+console.log( typeof miFunction)
+console.log( typeof forma)
+console.log( typeof tamano)
+
+console.log(forma)
+
+// El método trim quita los espacios al principio y al final de una cadena.
+if (typeof forma == 'string'){
+    forma = forma.trim()
+}
+
+console.log(forma)
+
+
+
+
+//                                                Array de Objetos:
+
+// const objeto1 = {
+//     id: 1,
+//     producto: 'Arroz'
+// }
+
+// const arrayDeObjetos = [objeto1, {id: 2, producto: 'Fideo'}]
+
+// arrayDeObjetos.push({id:3, producto: 'Pan'})
+
+
+
+
+
+
+
+//                                               Recorrer un array con For...of
+
+// for (const obj of arrayDeObjetos){
+//     console.log(obj.id)
+//     console.log(obj.producto)
+// }
