@@ -43,18 +43,22 @@
 
 
 //                                   Ejemplo aplicado: Crear array con entradas de usuario
-const listaNombres = []
-let contador = 5
+// const listaNombres = []
+// let contador = 5
 
-do{
+// do{
 
-    let entrada = prompt('Ingrese un nombre: ')
-    listaNombres.push(entrada.toUpperCase())
+//     let entrada = prompt('Ingrese un nombre: ')
+//     listaNombres.push(entrada.toUpperCase())
     
-}while(listaNombres.length != contador)
+// }while(listaNombres.length != contador)
     
-console.log(listaNombres)
-const listaNueva = listaNombres.concat(['ANA', 'EMA'])
+// console.log(listaNombres)
+// const listaNueva = listaNombres.concat(['ANA', 'EMA'])
 
-alert(listaNueva.join('\n'))
+// alert(listaNueva.join('\n'))
 
+
+//                                             Tipos de datos
+
+const tiposDeDatos = ['String', 'Number', 'Boolean', 'Function', 'Object', 'Array']
