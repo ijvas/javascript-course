@@ -116,42 +116,93 @@
 
 //                                          Ejemplo aplicado: Objetos, producto y array
 
-class Producto{
+// class Producto{
 
-    constructor(nombre, precio){
-        this.nombre = nombre.toUpperCase()
-        this.precio = parseFloat(precio)
-        this.vendido = false
-    }
+//     constructor(nombre, precio){
+//         this.nombre = nombre.toUpperCase()
+//         this.precio = parseFloat(precio)
+//         this.vendido = false
+//     }
 
-    sumaIva(){
-        this.precio = this.precio * 1.21
-    }
+//     sumaIva(){
+//         this.precio = this.precio * 1.21
+//     }
 
-    vender(){
-        this.vendido = true
-    }
-}
-
-
-const productos = []
-
-const objeto1 = new Producto('arroz', 125)
-const objeto2 = new Producto('fideo', 70)
-const objeto3 = new Producto('pan', 50)
-
-productos.push(objeto1)
-productos.push(objeto2)
-productos.push(objeto3)
-
-console.log(productos)
+//     vender(){
+//         this.vendido = true
+//     }
+// }
 
 
-for (prod of productos){
-    prod.sumaIva()
-}
+// const productos = []
 
-console.log(productos)
+// const objeto1 = new Producto('arroz', 125)
+// const objeto2 = new Producto('fideo', 70)
+// const objeto3 = new Producto('pan', 50)
+
+// productos.push(objeto1)
+// productos.push(objeto2)
+// productos.push(objeto3)
+
+// console.log(productos)
+
+
+// for (prod of productos){
+//     prod.sumaIva()
+// }
+
+// console.log(productos)
 
 
 
+
+
+
+//                                                   Metodo find()
+
+// const nombres = ['Isma', 'Wally', 'Hugo']
+// const nombreBuscado = nombres.find(obj => obj == 'Wally')
+// const nombreBuscado2 = nombres.find(obj => obj == 'Wolly')
+
+// console.log(nombreBuscado)
+// console.log(nombreBuscado2)
+
+
+
+
+
+
+
+
+
+
+
+//                                                    Metodo filter() - Crea copia de array
+
+// const nombres = ['Ana','Ema','Juan','Elia']
+
+// const filtro = nombres.filter(obj => obj.includes('o'))
+
+// console.log(filtro)
+
+
+
+
+
+
+
+
+//                                                      Metodo map() - Crea copia de array
+
+// const nombres = ['Ana', 'Ema', 'Juan', 'Elia']
+
+//probamos el for para ver si era lo mismo, pero no crea array.
+// for (obj of nombres){
+
+//     let lengths = obj.length
+//     console.log(lengths)
+
+// }
+
+// const lengths = nombres.map(obj => obj.length)
+// console.log(lengths)
