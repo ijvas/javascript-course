@@ -206,3 +206,44 @@
 
 // const lengths = nombres.map(obj => obj.length)
 // console.log(lengths)
+
+
+
+
+
+
+//                                   Ejemplo aplicado: Buscando y Filtrando objetos
+
+
+const productos = [
+    {id:1, producto: 'Arroz', precio: 125},
+    {id:2, producto: 'Fideo', precio: 70},
+    {id:3, producto: 'Pan', precio: 50},
+    {id:4, producto: 'Flan', precio: 100}
+];
+
+const buscarObjeto = productos.find(obj => obj.id === 3 );
+
+console.log(buscarObjeto)
+
+
+
+const baratos = productos.filter(obj => obj.precio < 100)
+console.log(baratos)
+
+
+const preciosConAumento = productos.map(obj => obj.precio += 30)
+console.log(preciosConAumento)
+
+
+
+
+
+
+
+
+
+
+
+
+
