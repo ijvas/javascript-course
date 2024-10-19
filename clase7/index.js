@@ -22,9 +22,9 @@ localStorage.setItem('UoO', 'es magike')
 
 
 // // almacenar información
-// sessionStorage.setItem('seleccionados', [1,2,3]);
-// sessionStorage.setItem('esValido', false);
-// sessionStorage.setItem('email', 'info@mail.com');
+sessionStorage.setItem('seleccionados', [1,2,3]);
+sessionStorage.setItem('esValido', false);
+sessionStorage.setItem('email', 'info@mail.com');
 
 
 
@@ -40,7 +40,18 @@ localStorage.setItem('UoO', 'es magike')
 
 //                                                 Recorrer el local o session Storage
 
-for (let i = 0; i < localStorage.length; i++){
-    let variable = localStorage.key(i)
-    console.log('Clave: ' + variable)
-}
+// for (let i = 0; i < localStorage.length; i++){
+//     let variable = localStorage.key(i)
+//     console.log('Clave: ' + variable)
+// }
+
+
+
+
+
+//                                          Borrar información de los Storage
+
+localStorage.removeItem('UoO')
+localStorage.removeItem('holaQuehace')
+
+sessionStorage.clear()
