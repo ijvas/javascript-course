@@ -65,13 +65,50 @@
 
 
 
-const multiplicar = (a, b) => a * b
-const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) }
+// const multiplicar = (a, b) => a * b
+// const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) }
 
-alert('Vamos a crear la tabla de un numero')
-let ingresarNumero = parseInt(prompt('Ud quiere ver la tabla del: '))
+// alert('Vamos a crear la tabla de un numero')
+// let ingresarNumero = parseInt(prompt('Ud quiere ver la tabla del: '))
 
 
-for(i = 0; i <= 10; i++){
-    alert('tabla del: '+ ingresarNumero + ': ' + multiplicar(ingresarNumero, i))
-}
+// for(i = 0; i <= 100; i++){
+//     guardarLocal(i , multiplicar(ingresarNumero, i) )
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+//                                       JSON.stringify()
+
+const objeto1 = {id: 2, producto: 'Arroz'};
+
+const objetoPasadoAJson = JSON.stringify(objeto1)
+
+localStorage.setItem('producto1', objetoPasadoAJson )
+
+
+
+
+
+//                                        JSON.parse()
+
+// const objetoParseado = JSON.parse(objetoPasadoAJson)
+
+
+const producto2 = JSON.parse( localStorage.getItem('producto1') )
+
+console.log(producto2.id)
+console.log(producto2['producto'])
+
+
+
+
