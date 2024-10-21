@@ -89,26 +89,53 @@
 
 //                                       JSON.stringify()
 
-const objeto1 = {id: 2, producto: 'Arroz'};
+// const objeto1 = {id: 2, producto: 'Arroz'};
 
-const objetoPasadoAJson = JSON.stringify(objeto1)
+// const objetoPasadoAJson = JSON.stringify(objeto1)
 
-localStorage.setItem('producto1', objetoPasadoAJson )
-
-
-
-
-
-//                                        JSON.parse()
-
-// const objetoParseado = JSON.parse(objetoPasadoAJson)
-
-
-const producto2 = JSON.parse( localStorage.getItem('producto1') )
-
-console.log(producto2.id)
-console.log(producto2['producto'])
+// localStorage.setItem('producto1', objetoPasadoAJson )
 
 
 
 
+
+// //                                        JSON.parse()
+
+// // const objetoParseado = JSON.parse(objetoPasadoAJson)
+
+
+// const producto2 = JSON.parse( localStorage.getItem('producto1') )
+
+// console.log(producto2.id)
+// console.log(producto2['producto'])
+
+
+
+
+
+
+
+
+
+//                                      Ejemplo aplicado: Almacenar array de objetos
+
+
+const productos = [ 
+    {id: 1, producto: 'Arroz', precio: 125},
+    {id: 2, producto: 'Fideo', precio: 70},
+    {id: 3, producto: 'Pan', precio: 50},
+    {id: 4, producto: 'Flan', precio: 100}
+]
+
+
+const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)}
+
+
+//Almacenar producto por producto
+for (producto of productos){
+    guardarLocal(producto.id, JSON.stringify(producto))
+}
+
+
+//Almacena el array completo
+// guardarLocal('listaProductos', JSON.stringify(productos))
