@@ -150,50 +150,50 @@
 //                                 Ejemplo aplicado: Obtener array almacenado
 
 
-class Producto{
-    constructor(obj){
-        this.nombre = obj.producto.toUpperCase()
-        this.precio = parseFloat(obj.precio)
-    }
+// class Producto{
+//     constructor(obj){
+//         this.nombre = obj.producto.toUpperCase()
+//         this.precio = parseFloat(obj.precio)
+//     }
 
-    sumaIva(){
-        this.precio = this.precio * 1.21
-    }
-}
-
-
-const productos = [ 
-    {id: 1, producto: 'Arroz', precio: 125},
-    {id: 2, producto: 'Fideo', precio: 70},
-    {id: 3, producto: 'Pan', precio: 50},
-    {id: 4, producto: 'Flan', precio: 100}
-]
+//     sumaIva(){
+//         this.precio = this.precio * 1.21
+//     }
+// }
 
 
-const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)}
+// const productos = [ 
+//     {id: 1, producto: 'Arroz', precio: 125},
+//     {id: 2, producto: 'Fideo', precio: 70},
+//     {id: 3, producto: 'Pan', precio: 50},
+//     {id: 4, producto: 'Flan', precio: 100}
+// ]
 
-guardarLocal('listaProductos', JSON.stringify(productos))
+
+// const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)}
+
+// guardarLocal('listaProductos', JSON.stringify(productos))
 
 
 
-const arrayAlmacenado = JSON.parse(localStorage.getItem('listaProductos'))
+// const arrayAlmacenado = JSON.parse(localStorage.getItem('listaProductos'))
 
-const productosTraidos = []
+// const productosTraidos = []
 
-for (const objeto of arrayAlmacenado){
-    productosTraidos.push(new Producto(objeto))
-}
+// for (const objeto of arrayAlmacenado){
+//     productosTraidos.push(new Producto(objeto))
+// }
 
-// Al pushear objetos con new Producto, vamos a poder traer los objetos y agregarle métodos al traerlos.
-for (const obj of productosTraidos){
-    obj.sumaIva()
-}
+// // Al pushear objetos con new Producto, vamos a poder traer los objetos y agregarle métodos al traerlos.
+// for (const obj of productosTraidos){
+//     obj.sumaIva()
+// }
 
-// Con esto le sumamos el Iva a un solo objeto del arrayFinal, usando su posición en el array:
+//Con esto le sumamos el Iva a un solo objeto del arrayFinal, usando su posición en el array:
 // arrayFinal[1].sumarIva()
 
 
-// Con esto le sumamos el Iva a todos los objetos del Array final:
+//Con esto le sumamos el Iva a todos los objetos del Array final:
 // for(const x of arrayFinal){
 //     x.sumarIva()
 // }
@@ -201,3 +201,45 @@ for (const obj of productosTraidos){
 
 
 
+const array = [
+    {id: 1, producto: 'Tabla', precio: 10000},
+    {id: 2, producto: 'Trucks', precio: 50000},
+    {id: 3, producto: 'Ruedas', precio: 30000}
+]
+
+class Producto{
+    constructor(objeto){
+        this.id = parseInt(objeto.id)
+        this.nombre = objeto.producto
+        this.precio = parseFloat(objeto.precio)
+    }
+
+    sumarIva(){
+        this.precio = this.precio * 1.21
+    }
+}
+
+
+
+localStorage.setItem('listaDeProductos', JSON.stringify(array))
+
+const arrayTraido = JSON.parse( localStorage.getItem('listaDeProductos') )
+
+const arrayFinal = []
+
+for(const obj of arrayTraido){
+    arrayFinal.push( new Producto(obj) )
+}
+
+
+
+//Con esto le sumamos el Iva a un solo objeto del arrayFinal, usando su posición en el array:
+arrayFinal[1].sumarIva()
+
+
+//Con esto le sumamos el Iva a todos los objetos del Array final:
+// for(const x of arrayFinal){
+//     x.sumarIva()
+// }
+
+console.log(arrayFinal)
