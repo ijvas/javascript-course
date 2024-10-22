@@ -120,6 +120,48 @@
 //                                      Ejemplo aplicado: Almacenar array de objetos
 
 
+// const productos = [ 
+//     {id: 1, producto: 'Arroz', precio: 125},
+//     {id: 2, producto: 'Fideo', precio: 70},
+//     {id: 3, producto: 'Pan', precio: 50},
+//     {id: 4, producto: 'Flan', precio: 100}
+// ]
+
+
+// const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)}
+
+
+//Almacenar producto por producto
+// for (producto of productos){
+//     guardarLocal(producto.id, JSON.stringify(producto))
+// }
+
+
+//Almacena el array completo
+// guardarLocal('listaProductos', JSON.stringify(productos))
+
+
+
+
+
+
+
+
+//                                 Ejemplo aplicado: Obtener array almacenado
+
+
+class Producto{
+    constructor(obj){
+        this.nombre = obj.producto.toUpperCase()
+        this.precio = parseFloat(obj.precio)
+    }
+
+    sumaIva(){
+        this.precio = this.precio * 1.21
+    }
+}
+
+
 const productos = [ 
     {id: 1, producto: 'Arroz', precio: 125},
     {id: 2, producto: 'Fideo', precio: 70},
@@ -130,12 +172,32 @@ const productos = [
 
 const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)}
 
+guardarLocal('listaProductos', JSON.stringify(productos))
 
-//Almacenar producto por producto
-for (producto of productos){
-    guardarLocal(producto.id, JSON.stringify(producto))
+
+
+const arrayAlmacenado = JSON.parse(localStorage.getItem('listaProductos'))
+
+const productosTraidos = []
+
+for (const objeto of arrayAlmacenado){
+    productosTraidos.push(new Producto(objeto))
 }
 
+// Al pushear objetos con new Producto, vamos a poder traer los objetos y agregarle métodos al traerlos.
+for (const obj of productosTraidos){
+    obj.sumaIva()
+}
 
-//Almacena el array completo
-// guardarLocal('listaProductos', JSON.stringify(productos))
+// Con esto le sumamos el Iva a un solo objeto del arrayFinal, usando su posición en el array:
+// arrayFinal[1].sumarIva()
+
+
+// Con esto le sumamos el Iva a todos los objetos del Array final:
+// for(const x of arrayFinal){
+//     x.sumarIva()
+// }
+
+
+
+
