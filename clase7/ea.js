@@ -30,7 +30,6 @@
 
 // arrow function:
 const guardarEnLocalStorage = (clave, valor) => localStorage.setItem(clave, valor)
-
 const traerDelLocalStorage = (clave) => localStorage.getItem(clave)
 
 
@@ -60,6 +59,11 @@ const array = [producto1, producto2, producto3, producto4]
 const arrayEnJson = JSON.stringify(array)
 
 guardarEnLocalStorage('Productos', arrayEnJson)
+
+
+const arrayParseado = JSON.parse( traerDelLocalStorage('Productos') )
+
+console.log(arrayParseado)
 
 
 let nombre = 'Ismael'
