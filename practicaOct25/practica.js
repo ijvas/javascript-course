@@ -22,11 +22,21 @@ for(const prod of array){
 }
 
 
+//                                 Traer array del localStorage
 
 
-// const arrayTraido = JSON.parse( localStorage.getItem('Array') )
 
-    
+const prod1Traido = JSON.parse( localStorage.getItem('1') )
+const prod2Traido = JSON.parse( localStorage.getItem('2') )
+
+
+const arrayTraido = []
+
+arrayTraido.push(prod1Traido)
+arrayTraido.push(prod2Traido)
+
+console.log(arrayTraido)
+
 
 
 
