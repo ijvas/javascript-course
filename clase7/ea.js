@@ -29,50 +29,50 @@
 
 
 // arrow function:
-const guardarEnLocalStorage = (clave, valor) => localStorage.setItem(clave, valor)
-const traerDelLocalStorage = (clave) => localStorage.getItem(clave)
+// const guardarEnLocalStorage = (clave, valor) => localStorage.setItem(clave, valor)
+// const traerDelLocalStorage = (clave) => localStorage.getItem(clave)
 
 
-let producto1 = {id: 1, nombre: 'Tabla Creature', precio: 100000}
-let producto2 = {id: 2, nombre: 'Tabla Seven', precio: 70000}
+// let producto1 = {id: 1, nombre: 'Tabla Creature', precio: 100000}
+// let producto2 = {id: 2, nombre: 'Tabla Seven', precio: 70000}
 
-class Producto{
-    constructor(id, nombre, precio){
-        this.id = id
-        this.nombre = nombre
-        this.precio = precio
-        this.vendido = false
-    }
+// class Producto{
+//     constructor(id, nombre, precio){
+//         this.id = id
+//         this.nombre = nombre
+//         this.precio = precio
+//         this.vendido = false
+//     }
 
-    vender(){
-        this.vendido = true
-    }
-}
+//     vender(){
+//         this.vendido = true
+//     }
+// }
 
-let producto3 = new Producto(3, 'Trucks Independent', 500000)
-let producto4 = new Producto(4, 'Ruedas Bones', 150000)
+// let producto3 = new Producto(3, 'Trucks Independent', 500000)
+// let producto4 = new Producto(4, 'Ruedas Bones', 150000)
 
-producto3.vender()
+// producto3.vender()
 
-const array = [producto1, producto2, producto3, producto4]
+// const array = [producto1, producto2, producto3, producto4]
 
-const arrayEnJson = JSON.stringify(array)
+// const arrayEnJson = JSON.stringify(array)
 
-guardarEnLocalStorage('Productos', arrayEnJson)
-
-
-const arrayParseado = JSON.parse( traerDelLocalStorage('Productos') )
-
-console.log(arrayParseado)
+// guardarEnLocalStorage('Productos', arrayEnJson)
 
 
-let nombre = 'Ismael'
+// const arrayParseado = JSON.parse( traerDelLocalStorage('Productos') )
 
-guardarEnLocalStorage('Alumno', nombre)
+// console.log(arrayParseado)
 
-let alumnoTraido = traerDelLocalStorage('Alumno')
 
-console.log( alumnoTraido )
+// let nombre = 'Ismael'
+
+// guardarEnLocalStorage('Alumno', nombre)
+
+// let alumnoTraido = traerDelLocalStorage('Alumno')
+
+// console.log( alumnoTraido )
 
 
 
