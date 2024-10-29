@@ -35,3 +35,18 @@ parrafo.innerHTML = '<h2 id="prueba">¡Hola Coder!</h2>'
 //                               Metemos el nodo creado al HTML
 document.body.appendChild(parrafo)
 
+
+
+
+
+
+
+
+
+//                               Remover nodos
+let h2 = document.getElementById('prueba')
+
+h2.parentNode.removeChild(h2)
+
+
+
