@@ -68,3 +68,35 @@ let inputEdad = document.getElementById('edad').value
 
 console.log(inputNombre)
 console.log(inputEdad)
+
+
+
+
+
+
+
+
+
+//                       Ejemplo aplicado: creando opciones desde un array
+let personas = ['HOMERO', 'MARGE', 'BART', 'LISA', 'MAGGIE']
+
+let ul = document.getElementById('personas')
+
+for(const persona of personas){
+    let li = document.createElement('li')
+    li.innerHTML = persona
+    ul.appendChild(li)
+}
+
+
+
+
+
+//Practicamos meter unas palabras adentro de un p creado. Y eso, adentro de un div que estaba en el HTML
+let palabras = 'PALABRAS QUE METEMOS'
+
+let espacioAsignado = document.getElementById('palabraAgregada')
+
+let pe = document.createElement('p')
+pe.innerHTML = palabras
+espacioAsignado.appendChild(pe)
