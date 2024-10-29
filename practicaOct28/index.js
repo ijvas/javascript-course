@@ -27,6 +27,10 @@ array.push(object1)
 array.push(object2)
 array.push(object3)
 
+console.dir(document)
+console.dir(document.head)
+console.dir(document.body)
+
 for(let obj of array){
     guardarLocal(obj.id, JSON.stringify(obj))
 }
