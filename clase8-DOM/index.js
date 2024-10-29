@@ -50,3 +50,13 @@ h2.parentNode.removeChild(h2)
 
 
 
+
+
+
+
+
+
+
+//                                Obtenet datos de Input
+document.getElementById('nombre').value = 'HOMERO'
+document.getElementById('edad').value = 39
