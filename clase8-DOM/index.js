@@ -57,10 +57,12 @@ h2.parentNode.removeChild(h2)
 
 
 
-//                                Obtenet datos de Input
+//                                Dar datos a los Input de un form
 document.getElementById('nombre').value = 'HOMERO'
 document.getElementById('edad').value = 39
 
+
+//                                Obtener datos de los Input de un form
 let inputNombre = document.getElementById('nombre').value
 let inputEdad = document.getElementById('edad').value
 
