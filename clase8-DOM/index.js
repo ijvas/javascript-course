@@ -60,3 +60,9 @@ h2.parentNode.removeChild(h2)
 //                                Obtenet datos de Input
 document.getElementById('nombre').value = 'HOMERO'
 document.getElementById('edad').value = 39
+
+let inputNombre = document.getElementById('nombre').value
+let inputEdad = document.getElementById('edad').value
+
+console.log(inputNombre)
+console.log(inputEdad)
