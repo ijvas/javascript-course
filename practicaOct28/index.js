@@ -1,3 +1,5 @@
+const guardarLocal = (clave, valor) => localStorage.setItem(clave, valor)
+
 class Object{
     constructor(id, name, price){
         this.id = parseInt(id)
@@ -25,4 +27,6 @@ array.push(object1)
 array.push(object2)
 array.push(object3)
 
-console.log(array)
+for(let obj of array){
+    guardarLocal(obj.id, JSON.stringify(obj))
+}
