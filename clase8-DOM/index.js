@@ -167,13 +167,46 @@ capturado.appendChild(headerTitulo)
 //                        Creamos contenido interno con Sugar Sintax
 
 
-let producto = {id: 1, nombre: 'Arroz', precio: 125}
+// let producto = {id: 1, nombre: 'Arroz', precio: 125}
 
-let contenedor = document.createElement('div')
-contenedor.innerHTML = `<img src="./src/whatsapp.svg">
-                        <h2>Imagen de Whatsapp</h2>`
+// let contenedor = document.createElement('div')
+// contenedor.innerHTML = `<img src="./src/whatsapp.svg">
+//                         <h2>Imagen de Whatsapp</h2>`
+
+
+// let pieDePagina = document.getElementById('pie')
+
+// pieDePagina.appendChild(contenedor)
+
+
+
+
+
+
+
+
+
+
+//                             Ejemplo aplicado: Creando elementos desde objetos
+
+const productos = [
+
+    {id: 1 , nombre: 'papa', precio: 125 },
+    {id: 2, nombre: 'tomate', precio: 150 },
+    {id: 3, nombre: 'cebolla', precio: 200},
+    {id: 4, nombre: 'perejil', precio: 25}
+
+]
 
 
 let pieDePagina = document.getElementById('pie')
 
-pieDePagina.appendChild(contenedor)
+for(const objeto of productos){
+    let contenedor = document.createElement('div')
+    contenedor.innerHTML = `<br>
+                            <h3>ID: ${objeto.id}</h3>
+                            <p>Nombre: ${objeto.nombre}</p>
+                            <b>$${objeto.precio}</b>`
+
+    pieDePagina.appendChild(contenedor)
+}
