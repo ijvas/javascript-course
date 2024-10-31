@@ -111,14 +111,6 @@
 
 
 
-let producto = {id: 1, nombre: 'Arroz', precio: 125}
-
-let concatenado = 'ID: ' + producto.id + ' - Producto: ' + producto.nombre + ' $' + producto.precio
-
-console.log(concatenado)
-
-let plantilla = `El nombre del producto es: ${producto.nombre}` 
-console.log(plantilla)
 
 
 
@@ -126,19 +118,62 @@ console.log(plantilla)
 
 
 
+                        //                 PRACTICA
 
 
 
 
+let capturado = document.getElementById('header')
 
-// let capturado = document.getElementById('header')
+let headerTitulo = document.createElement('h1')
+headerTitulo.innerHTML = 'LA PAGINA DE COMPUTADORAS'
 
-// let headerTitulo = document.createElement('h1')
-// headerTitulo.innerHTML = 'LA PAGINA DE COMPUTADORAS'
-
-// capturado.appendChild(headerTitulo)
+capturado.appendChild(headerTitulo)
 
 
 // //                                         Para borrar un nodo
 // // capturado.parentNode.removeChild(capturado)
 // titulo.parentNode.removeChild(titulo)
+
+
+
+
+
+
+
+
+
+
+
+
+//                        PLANTILLAS LITERALES
+
+
+// let producto = {id: 1, nombre: 'Arroz', precio: 125}
+
+// let concatenado = 'ID: ' + producto.id + ' - Producto: ' + producto.nombre + ' $' + producto.precio
+
+// console.log(concatenado)
+
+// let plantilla = `El nombre del producto es: ${producto.nombre}` 
+// console.log(plantilla)
+
+
+
+
+
+
+
+//                        Creamos contenido interno con Sugar Sintax
+
+
+let producto = {id: 1, nombre: 'Arroz', precio: 125}
+
+let contenedor = document.createElement('div')
+contenedor.innerHTML = `<img src="./src/whatsapp.svg">
+                        <h2>Imagen de Whatsapp</h2>`
+
+
+let pieDePagina = document.getElementById('pie')
+
+pieDePagina.appendChild(contenedor)
