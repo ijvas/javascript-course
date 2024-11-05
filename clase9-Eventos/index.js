@@ -27,12 +27,12 @@
 
 //                                              Eventos del mouse
 
-let respuestaClick = () => alert('Me clickeaste')
+// let respuestaClick = () => alert('Me clickeaste')
 
-let boton = document.getElementById('btnPracticaMouse')
+// let boton = document.getElementById('btnPracticaMouse')
 
-boton.onclick = respuestaClick
-boton.onmousemove = () => {alert('Pasaste moviendo el mouse sobre el boton')}
+// boton.onclick = respuestaClick
+// boton.onmousemove = () => {alert('Pasaste moviendo el mouse sobre el boton')}
 
 
 
@@ -66,3 +66,26 @@ boton.onmousemove = () => {alert('Pasaste moviendo el mouse sobre el boton')}
 //     }
 //     console.log(inputEdadChange.value)
 // }
+
+
+
+
+
+//                                              Evento Submit
+// Js de la página contacto.html
+let validarFormulario = (event) => {
+    event.preventDefault()
+    let formulario = event.target
+    console.log(formulario.children[0].value)
+    console.log(formulario.children[1].value)
+}
+
+
+let miformulario = document.getElementById('formulario')
+miformulario.addEventListener('submit', validarFormulario)
+
+
+
+
+
+    
