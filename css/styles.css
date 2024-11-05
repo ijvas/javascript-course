@@ -10,3 +10,11 @@
     height: 10vh;
     text-align: center;
 }
+
+.pieDePagina{
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+    width: 100%;
+    height: 20vh;
+}
