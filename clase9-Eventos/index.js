@@ -54,15 +54,15 @@ boton.onmousemove = () => {alert('Pasaste moviendo el mouse sobre el boton')}
 
 //                                                 Evento CHANGE
 
-let inputNombreChange = document.getElementById('nombrePracticaChange')
-let inputEdadChange = document.getElementById('edadPracticaChange')
+// let inputNombreChange = document.getElementById('nombrePracticaChange')
+// let inputEdadChange = document.getElementById('edadPracticaChange')
 
 
-inputNombreChange.onchange = () => console.log('valor 1')
-inputEdadChange.onchange = () => {
-    let array = ['Hola', 'CHAU']
-    for (const prod of array){
-        console.log(prod)
-    }
-    console.log(inputEdadChange.value)
-}
+// inputNombreChange.onchange = () => console.log('valor 1')
+// inputEdadChange.onchange = () => {
+//     let array = ['Hola', 'CHAU']
+//     for (const prod of array){
+//         console.log(prod)
+//     }
+//     console.log(inputEdadChange.value)
+// }
