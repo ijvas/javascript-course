@@ -102,17 +102,17 @@
 
 
 
-//                                                  jQuery append()
+// //                                                  jQuery append()
 
 
-let producto = {id: 1, nombre: 'Arroz', precio: 125}
+// let producto = {id: 1, nombre: 'Arroz', precio: 125}
 
 
-$('#app').append(`<div>
-    <h3>ID: ${producto.id}</h3>
-                    <p> Producto: ${producto.nombre}</p>
-                    <b> $${producto.precio}</b>
-                    </div>`)
+// $('#app').append(`<div>
+//     <h3>ID: ${producto.id}</h3>
+//                     <p> Producto: ${producto.nombre}</p>
+//                     <b> $${producto.precio}</b>
+//                     </div>`)
                     
 
                     
@@ -121,19 +121,38 @@ $('#app').append(`<div>
                     
                     
                     
-//                                                  jQuery prepend()
+// //                                                  jQuery prepend()
                     
                     
-let producto2 = {id: 2, nombre: 'Flan', precio: 150}
+// let producto2 = {id: 2, nombre: 'Flan', precio: 150}
 
-$('#app').prepend(`<div>
-                    <h3>ID: ${producto2.id}</h3>
-                    <p> Producto: ${producto2.nombre}</p>
-                    <b> $${producto2.precio}</b>
-                  </div>`)
+// $('#app').prepend(`<div>
+//                     <h3>ID: ${producto2.id}</h3>
+//                     <p> Producto: ${producto2.nombre}</p>
+//                     <b> $${producto2.precio}</b>
+//                   </div>`)
 
 
 
                   
 
         
+//                  Ejemplo aplicado: Agregando al DOM datos de un array, con jquery
+
+
+
+const productos = [
+    {id: 1,nombre: 'Fideo',precio: 70},
+    {id: 2,nombre: 'Pan',precio: 50},
+    {id: 3,nombre: 'Flan',precio: 100},
+    {id: 4,nombre: 'Manteca',precio: 125}
+]
+
+
+for (const producto of productos){
+    $('#app').append(`<div>
+                        <h3>ID: ${producto.id}</h3>
+                        <p> Producto: ${producto.nombre}</p>
+                        <b> $${producto.precio}</b>
+                    </div>`)
+}
