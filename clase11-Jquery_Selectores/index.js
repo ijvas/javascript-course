@@ -102,14 +102,38 @@
 
 
 
-//                                       jQuery append()
+//                                                  jQuery append()
 
 
 let producto = {id: 1, nombre: 'Arroz', precio: 125}
 
 
 $('#app').append(`<div>
-                    <h3>ID: ${producto.id}</h3>
-                    <p> Producto: ${producto.nombre}</p>}
+    <h3>ID: ${producto.id}</h3>
+                    <p> Producto: ${producto.nombre}</p>
                     <b> $${producto.precio}</b>
+                    </div>`)
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+//                                                  jQuery prepend()
+                    
+                    
+let producto2 = {id: 2, nombre: 'Flan', precio: 150}
+
+$('#app').prepend(`<div>
+                    <h3>ID: ${producto2.id}</h3>
+                    <p> Producto: ${producto2.nombre}</p>
+                    <b> $${producto2.precio}</b>
                   </div>`)
+
+
+
+                  
+
+        
