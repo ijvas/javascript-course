@@ -26,18 +26,26 @@
 
 //                          Forma corta de escribir el ready()
 
-$(function() { console.log('Forma corta con function')})
+// $(function() { console.log('Forma corta con function')})
 
 
 
-//                          Forma corta del ready, con función flecha( arrow function )
+// //                          Forma corta del ready, con función flecha( arrow function )
 
-$(() => console.log('Forma corta con funcion flecha'))
-
-
+// $(() => console.log('Forma corta con funcion flecha'))
 
 
 
+
+
+//                              Metodo ON
+
+
+$('body').prepend(` <button id="btnjQuery">CLICK!</button>`).on('click', function() {console.log('Respuesta a un click!')})
+
+
+
+$('#btnjQuery').on('dblclick', ()=>{console.log('Respuesta al doble click!')})
 
 
 
