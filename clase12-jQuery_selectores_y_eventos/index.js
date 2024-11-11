@@ -41,11 +41,35 @@
 //                              Metodo ON
 
 
-$('body').prepend(` <button id="btnjQuery">CLICK!</button>`).on('click', function() {console.log('Respuesta a un click!')})
+// $('body').prepend(` <button id="btnjQuery">CLICK!</button>`).on('click', function() {console.log('Respuesta a un click!')})
 
 
 
-$('#btnjQuery').on('dblclick', ()=>{console.log('Respuesta al doble click!')})
+// $('#btnjQuery').on('dblclick', ()=>{console.log('Respuesta al doble click!')})
 
 
 
+
+
+//                           Ejemplo aplicado: Asociar evento a botón creado
+
+
+
+const productos = [
+    {id:1, nombre: 'Arroz', precio: 125},
+    {id:2, nombre: 'Fideo', precio: 70},
+    {id:3, nombre: 'Pan', precio: 50},
+    {id:4, nombre: 'Flan', precio: 100}
+]
+
+for (const producto of productos){
+    $('#app').append(`  <div>
+                           <h4>Nombre: ${producto.nombre}</h4>
+                           <b>$${producto.precio}</b>
+                           <br>
+                           <button id="btn${producto.id}">Comprar</button>
+                        </div>
+                        <br>`)
+
+    $(`#btn${producto.id}`).on('click', ()=> {console.log(` Compraste ${producto.nombre}`)} )
+}
