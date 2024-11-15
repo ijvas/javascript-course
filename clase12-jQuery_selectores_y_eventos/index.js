@@ -116,3 +116,28 @@ $("body").prepend(`<input type="text" class="inputsClass">
    $(".inputsClass").change(function (e) {
     console.log(this.value);
    });
+
+
+
+
+
+
+//                      SUBMIT()
+
+//Agregamos un formulario con jQuery
+$("body").prepend(`<form id="myForm">
+ <input type="text" >
+ <input type="number">
+ <input type="submit">
+ </form>`);
+//Asociamos el evento submit al formulario
+$("#myForm").submit(function (e) {
+ //Prevenimos el comportamiento de submit
+ e.preventDefault();
+ //Obtenemos hijos del formulario
+ let hijos = $(e.target).children();
+ //Primer input type="text"
+ console.log(hijos[0].value);
+ //Primer input type="number"
+ console.log(hijos[1].value);
+});
