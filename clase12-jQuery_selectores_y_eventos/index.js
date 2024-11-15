@@ -122,22 +122,44 @@ $("body").prepend(`<input type="text" class="inputsClass">
 
 
 
-//                      SUBMIT()
+// //                      SUBMIT()
 
-//Agregamos un formulario con jQuery
-$("body").prepend(`<form id="myForm">
- <input type="text" >
- <input type="number">
- <input type="submit">
- </form>`);
-//Asociamos el evento submit al formulario
-$("#myForm").submit(function (e) {
- //Prevenimos el comportamiento de submit
- e.preventDefault();
- //Obtenemos hijos del formulario
- let hijos = $(e.target).children();
- //Primer input type="text"
- console.log(hijos[0].value);
- //Primer input type="number"
- console.log(hijos[1].value);
+// //Agregamos un formulario con jQuery
+// $("body").prepend(`<form id="myForm">
+//  <input type="text" >
+//  <input type="number">
+//  <input type="submit">
+//  </form>`);
+// //Asociamos el evento submit al formulario
+// $("#myForm").submit(function (e) {
+//  //Prevenimos el comportamiento de submit
+//  e.preventDefault();
+//  //Obtenemos hijos del formulario
+//  let hijos = $(e.target).children();
+//  //Primer input type="text"
+//  console.log(hijos[0].value);
+//  //Primer input type="number"
+//  console.log(hijos[1].value);
+// });
+
+
+
+
+
+
+
+//                  METODO TRIGGER()
+
+
+//Agregamos un botón y un input
+$("body").prepend('<button id="btn1">BUTTON</button>');
+$("body").prepend('<input id="ipt1" type="text">');
+//Asociamos el evento change al ipt1
+$("#ipt1").change((e) => {
+ alert("El valor es " + e.target.value);
+});
+//Asociamos el evento click para btn1 y usamos trigger
+$("#btn1").click(() => {
+ //Usamos trigger para disparar el evento change de ipt1
+ $("#ipt1").trigger("change");
 });
