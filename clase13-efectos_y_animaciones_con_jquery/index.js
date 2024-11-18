@@ -92,3 +92,19 @@ $("body").prepend(`<div id="div1" style="height: 120px">
 $("#btn1").click(() => {
  $("#div1").slideUp("fast");
 });
+
+
+
+
+
+//                                          slideToggle()
+//Agregamos un botón y un div con jQuery
+$("body").prepend('<button id="btn1">Mostrar</button>');
+$("body").prepend(`<div id="div1" style="height: 120px">
+ <h3>¡Hola Coder!</h3>
+ <h4>Sorpresa</h4>
+ </div>`);
+//Usamos toggle sobre div1 en respuesta al click del botòn btn1
+$("#btn1").click(() => {
+ $("#div1").toggle("fast");
+});
