@@ -24,3 +24,8 @@ $("h3").hide();
 //                                           fadeIN
 $("h3").fadeIn();
 
+
+
+//                                          fadeOut
+$("h3").fadeOut();
+
