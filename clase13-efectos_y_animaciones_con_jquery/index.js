@@ -1,7 +1,11 @@
 //                                             ANIMACIONES
 
 
+
+
 //                     elemento.animación(opcional:velocidad, opcional:callback)
+
+
 
 
 
@@ -15,9 +19,13 @@ $("h3, button").show(1000);
 
 
 
+
+
 //                                          HIDE
 
 // $("h3").hide();
+
+
 
 
 
@@ -26,8 +34,14 @@ $("h3, button").show(1000);
 
 
 
+
+
+
+
 //                                          fadeOut
 // $("h3").fadeOut();
+
+
 
 
 
@@ -42,8 +56,26 @@ $("h3, button").show(1000);
 //                                      Callback del fade
 
 
-//Ocultamos con fadeOut() todos los <h3>
-$("h3").fadeOut("slow", function(){
-    //Cuando termina de ocultarse el elemento lo mostramos nuevamente
-    $("h3").fadeIn(1000);
-   }); 
+// //Ocultamos con fadeOut() todos los <h3>
+// $("h3").fadeOut("slow", function(){
+//     //Cuando termina de ocultarse el elemento lo mostramos nuevamente
+//     $("h3").fadeIn(1000);
+//    }); 
+
+
+
+
+//                                      slideDown
+//Agregamos un botón y un div con jQuery
+$("body").prepend('<button id="btn1">Mostrar</button>');
+$("body").prepend(`<div id="div1" style="height: 120px">
+ <h3>¡Hola Coder!</h3>
+ <h4>Sorpresa 2</h4>
+ </div>`);
+//Usamos slideDown sobre div1 en respuesta al click del boton btn1
+$("#btn1").click(() => {
+ $("#div1").slideDown("fast");
+});                
+
+
+
