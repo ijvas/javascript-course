@@ -22,5 +22,5 @@ $("h3").hide();
 
 
 //                                           fadeIN
-
+$("h3").fadeIn();
 
