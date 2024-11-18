@@ -17,6 +17,10 @@ $("h3, button").toggle(1000);
 
 //                                          HIDE
 
-$("h3").hide(); 
+$("h3").hide();
+
+
+
+//                                           fadeIN
 
 
