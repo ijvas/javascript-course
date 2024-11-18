@@ -81,17 +81,17 @@ $("h3, button").show(1000);
 
 
 
-//                                          slideUp
-//Agregamos un botón y un div con jQuery
-$("body").prepend('<button id="btn1">Mostrar</button>');
-$("body").prepend(`<div id="div1" style="height: 120px">
- <h3>¡Hola Coder!</h3>
- <h4>Sorpresa 2</h4>
- </div>`);
-//Usamos slideUp sobre div1 en respuesta al click del boton btn1
-$("#btn1").click(() => {
- $("#div1").slideUp("fast");
-});
+// //                                          slideUp
+// //Agregamos un botón y un div con jQuery
+// $("body").prepend('<button id="btn1">Mostrar</button>');
+// $("body").prepend(`<div id="div1" style="height: 120px">
+//  <h3>¡Hola Coder!</h3>
+//  <h4>Sorpresa 2</h4>
+//  </div>`);
+// //Usamos slideUp sobre div1 en respuesta al click del boton btn1
+// $("#btn1").click(() => {
+//  $("#div1").slideUp("fast");
+// });
 
 
 
