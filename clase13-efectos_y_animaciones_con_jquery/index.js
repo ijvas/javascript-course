@@ -13,3 +13,10 @@ $("body").append('<button style="display: none" >BOTON</button>');
 
 $("h3, button").toggle(1000);
 
+
+
+//                                          HIDE
+
+$("h3").hide(); 
+
+
